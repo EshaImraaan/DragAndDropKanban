@@ -1,0 +1,156 @@
+/* ---- RESET/BASIC STYLING ---- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.kanban-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 10px;
+
+  font-family: 'Playfair Display', serif;
+
+  background: linear-gradient(to right, #a28a6c, #5c4033); /* light to dark brown */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 10px; /* reduced from 20px */
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/736x/90/71/fc/9071fca33fc8d1ee0b4f3d4ba42b03dd.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+  #todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  margin-top:30px;
+   padding: 10px 32px 0; 
+}
+
+#todo-form input {
+  padding: 12px;
+  margin-right: 12px;
+  width: 225px;
+
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  background: rgb(255, 245, 245);
+ color: rgb(111, 111, 111);
+  font-size: 14px;
+  outline: none;
+}
+#todo-form button {
+  padding: 12px 32px;
+
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  background: #fff4f4c0;
+  color: rgb(111, 111, 111);
+
+  font-weight: normal;       
+  font-size: 14px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+/* ---- BOARD ---- */
+.lanes {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  height: auto;
+  overflow: visible;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color:rgb(254, 238, 238);
+}
+
+.swim-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #8B5E3C;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+
+  padding: 12px;
+  border-radius: 4px;
+  width: 225px;
+  min-height: 120px;
+
+  flex-shrink: 0;
+}
+
+.task {
+  background: white;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+  padding: 12px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  cursor: move;
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: rgb(50, 50, 50);
+  color: white;
+}
+#reset-board-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+
+  background-color: #8B5E3C; /* brown shade */
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#reset-board-btn:hover {
+  background-color: #6b4228; /* darker on hover */
+}

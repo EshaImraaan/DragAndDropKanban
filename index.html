@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop API</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="drag.js" defer></script>
+    <script src="todo.js" defer></script>
+  </head>
+  <body>
+    <div class="board">
+      <h1 class="kanban-title">Drag and Drop Kanban Board</h1>
+      <button id="reset-board-btn">Start New Kanban Board</button>
+      <form id="todo-form">
+        <input type="text" placeholder="Enter New TODO" id="todo-input" />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="lanes">
+        <div class="swim-lane" id="todo-lane">
+          <h3 class="heading">TODO</h3>
+
+          <p class="task" draggable="true">Go to Shopping</p>
+          <p class="task" draggable="true">Make Lunch</p>
+          <p class="task" draggable="true">Practice Coding</p>
+           <p class="task" draggable="true">Water the Plants</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">In Progress</h3>
+
+          <p class="task" draggable="true">Learn to play Guitar</p>
+           <p class="task" draggable="true">Charge the Phone</p>
+        </div>
+
+        <div class="swim-lane">
+          <h3 class="heading">Done</h3>
+
+          <p class="task" draggable="true">Complete the painting</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
